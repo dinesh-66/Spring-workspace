@@ -1,7 +1,6 @@
 package com.example.demo.Controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -52,4 +51,23 @@ public class NController
 				ser.deleteInfo(id);
 				return"Delete by req param was successful";
 	}
+	@GetMapping("/sortdesc/{name}")
+	public List<Nike> sort(@PathVariable("name") String name)
+	{
+		return ser.sortDesc(name); 
+	}
+	
+	@GetMapping("/page/{pnum}/{psize}")
+	public List<Nike> page(@PathVariable("pnum")int num,@PathVariable("psize")int size)
+	{
+		return ser.page(num, size);
+	}
+	
+	@GetMapping("/pagesort/{pnum}/{psize}/{name}")
+	public List<Nike> pagesort(@PathVariable("pnum")int num,@PathVariable("psize")int size,@PathVariable("name")String name)
+	{
+		return ser.pagesort(num,size,name);
+	}
+	
 }
+     

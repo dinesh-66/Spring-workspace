@@ -9,75 +9,76 @@ import jakarta.persistence.Table;
 public class Nike 
 {
 	@Id
-	private int Sno;
-	private String Player;
-	private int Age;
-	private String Country;
-	private String Club;
-	private String Role;
-	private long Matches;
-	private long Goals;
-	private long Assist;
-	private int Trophies;
+	private int sno;
+	private String player;
+	private int age;
+	private String country;
+	private String club;
+	private String role;
+	private long matches;
+	private long goals;
+	private long assist;
+	private int trophies;
 	public int getSno() {
-		return Sno;
+		return sno;
 	}
 	public void setSno(int sno) {
-		Sno = sno;
+		this.sno = sno;
 	}
 	public String getPlayer() {
-		return Player;
+		return player;
 	}
 	public void setPlayer(String player) {
-		Player = player;
+		this.player = player;
 	}
 	public int getAge() {
-		return Age;
+		return age;
 	}
 	public void setAge(int age) {
-		Age = age;
+		this.age = age;
 	}
 	public String getCountry() {
-		return Country;
+		return country;
 	}
 	public void setCountry(String country) {
-		Country = country;
+		this.country = country;
 	}
 	public String getClub() {
-		return Club;
+		return club;
 	}
 	public void setClub(String club) {
-		Club = club;
+		this.club = club;
 	}
 	public String getRole() {
-		return Role;
+		return role;
 	}
 	public void setRole(String role) {
-		Role = role;
+		this.role = role;
 	}
 	public long getMatches() {
-		return Matches;
+		return matches;
 	}
 	public void setMatches(long matches) {
-		Matches = matches;
+		this.matches = matches;
 	}
 	public long getGoals() {
-		return Goals;
+		return goals;
 	}
 	public void setGoals(long goals) {
-		Goals = goals;
+		this.goals = goals;
 	}
 	public long getAssist() {
-		return Assist;
+		return assist;
 	}
 	public void setAssist(long assist) {
-		Assist = assist;
+		this.assist = assist;
 	}
 	public int getTrophies() {
-		return Trophies;
+		return trophies;
 	}
 	public void setTrophies(int trophies) {
-		Trophies = trophies;
+		this.trophies = trophies;
 	}
+	
 	
 }

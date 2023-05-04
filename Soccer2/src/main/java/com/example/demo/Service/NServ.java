@@ -1,10 +1,12 @@
 package com.example.demo.Service;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+
 
 import com.example.demo.Nike.Nike;
 import com.example.demo.Repository.NRepo;
@@ -30,8 +32,24 @@ public class NServ
 		return repo.findById(id).get();
 	}
 	
-	public List<Nike> getalldetails() {
-		// TODO Auto-generated method stub
+	public List<Nike> getalldetails() 
+	{
 		return repo.findAll();
+	}
+	
+	
+	public List<Nike> sortDesc(String name)
+	{
+		return repo.findAll(Sort.by(name).descending());
+	}
+	public List<Nike> page(int num, int size) 
+	{
+		Page<Nike> p=repo.findAll(PageRequest.of(num, size));
+		return p.getContent();
+	}
+	public List<Nike> pagesort(int num, int size, String name) {
+		Page<Nike> p=repo.findAll(PageRequest.of(num, size, Sort.by(name).descending()));
+		return p.getContent()
+				;
 	}
 }
