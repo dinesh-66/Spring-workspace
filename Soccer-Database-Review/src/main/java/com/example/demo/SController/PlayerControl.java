@@ -35,7 +35,7 @@ public class PlayerControl
 	
 	@Tag(name = "Get Method for Players",description = "Get All Details")
 	@GetMapping("/iget")
-	public List<Players> getAllDetails(Players si)
+	public List<Players> getAllDetails()
 	{
 		return prepo.getAllData();
 	}
